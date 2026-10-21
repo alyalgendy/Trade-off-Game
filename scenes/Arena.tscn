@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c1y0se7c08qwa"]
+
+[ext_resource type="Script" uid="uid://5pen10g244kk" path="res://scripts/arena.gd" id="1_5ftpa"]
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/Player.tscn" id="2_rarb2"]
+
+[node name="Arena" type="Node2D" unique_id=326985108]
+script = ExtResource("1_5ftpa")
+
+[node name="ArenaFloor" type="Sprite2D" parent="." unique_id=173141151]
+
+[node name="ArenaWals" type="StaticBody2D" parent="." unique_id=1619657177]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ArenaWals" unique_id=1463648286]
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=708795467]
+
+[node name="Player" parent="." unique_id=388526670 instance=ExtResource("2_rarb2")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1441770115]
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1133806178]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer/HUD" unique_id=83861018]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Heart1" type="TextureRect" parent="CanvasLayer/HUD/HeartContainer" unique_id=1349659498]
+layout_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer/HUD/HeartContainer" unique_id=1556867136]
+layout_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer/HUD/HeartContainer" unique_id=1747074696]
+layout_mode = 2
+
+[node name="MonsterLabel" type="Label" parent="CanvasLayer/HUD" unique_id=1830254311]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

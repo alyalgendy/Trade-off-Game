@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://db7vjk3h7j8ha"]
+
+[ext_resource type="Script" uid="uid://c5gwmgrhx2g0s" path="res://scripts/scout_screen.gd" id="1_ficas"]
+
+[node name="ScoutScreen" type="Control" unique_id=1995499492]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ficas")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2103293831]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1661393211]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1542502093]
+layout_mode = 2
+
+[node name="MonsterPreviewBox" type="PanelContainer" parent="VBoxContainer" unique_id=1698141287]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MonsterPreviewBox" unique_id=25592706]
+layout_mode = 2
+
+[node name="MonsterTexture" type="TextureRect" parent="VBoxContainer/MonsterPreviewBox/VBoxContainer" unique_id=981354004]
+layout_mode = 2
+
+[node name="MonsterPreviewLabel" type="Label" parent="VBoxContainer/MonsterPreviewBox/VBoxContainer" unique_id=947951816]
+layout_mode = 2
+
+[node name="PotionCardContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=877536077]
+layout_mode = 2
+alignment = 1
+
+[node name="EnterArenaButton" type="Button" parent="VBoxContainer" unique_id=1372395556]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/EnterArenaButton" to="." method="_on_enter_arena_button_pressed"]
