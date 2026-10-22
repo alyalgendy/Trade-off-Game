@@ -1,29 +1,52 @@
 [gd_scene format=3 uid="uid://d12spf8e1a6sh"]
 
 [ext_resource type="Script" uid="uid://crlmgltde8hcn" path="res://scripts/game_over_screen.gd" id="1_wojlb"]
+[ext_resource type="Texture2D" uid="uid://b1y3u6tlxhtea" path="res://assets/Foozle_2DT0003_Lucifer_Dungeon_Tileset_Pixel_Art/Png/92b8d876-6f83-4faa-8c8d-9544470ae4d2.jpg" id="2_jb1p3"]
 
 [node name="GameOverScreen" type="Control" unique_id=96361603]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_wojlb")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1652599876]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=614890129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jb1p3")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=651822982]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -217.0
+offset_right = 313.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1057452881]
 layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=658472538]
 layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "Game Over"
 
 [node name="RetryButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=612198430]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Retry
+"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

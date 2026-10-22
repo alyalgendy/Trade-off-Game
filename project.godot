@@ -10,13 +10,15 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Overdose"
+run/main_scene="uid://db7vjk3h7j8ha"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://gq7wyqgcdq3q"
+SFXManager="*uid://dq7axjus2yvkr"
 
 [display]
 
@@ -42,4 +44,5 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

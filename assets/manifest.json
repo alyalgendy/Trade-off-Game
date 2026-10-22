@@ -1,0 +1,136 @@
+{
+  "pack": "Magic Spells SFX Lite",
+  "families": 30,
+  "variations": 1,
+  "total": 30,
+  "sample_rate": 44100,
+  "channels": 1,
+  "bit_depth": 16,
+  "formats": [
+    "wav",
+    "ogg"
+  ],
+  "sounds": {
+    "charge": {
+      "wav": "wav/charge_01.wav",
+      "ogg": "ogg/charge_01.ogg"
+    },
+    "cast": {
+      "wav": "wav/cast_01.wav",
+      "ogg": "ogg/cast_01.ogg"
+    },
+    "bolt": {
+      "wav": "wav/bolt_01.wav",
+      "ogg": "ogg/bolt_01.ogg"
+    },
+    "impact": {
+      "wav": "wav/impact_01.wav",
+      "ogg": "ogg/impact_01.ogg"
+    },
+    "fizzle": {
+      "wav": "wav/fizzle_01.wav",
+      "ogg": "ogg/fizzle_01.ogg"
+    },
+    "fire_cast": {
+      "wav": "wav/fire_cast_01.wav",
+      "ogg": "ogg/fire_cast_01.ogg"
+    },
+    "fire_impact": {
+      "wav": "wav/fire_impact_01.wav",
+      "ogg": "ogg/fire_impact_01.ogg"
+    },
+    "ice_cast": {
+      "wav": "wav/ice_cast_01.wav",
+      "ogg": "ogg/ice_cast_01.ogg"
+    },
+    "ice_shatter": {
+      "wav": "wav/ice_shatter_01.wav",
+      "ogg": "ogg/ice_shatter_01.ogg"
+    },
+    "zap": {
+      "wav": "wav/zap_01.wav",
+      "ogg": "ogg/zap_01.ogg"
+    },
+    "thunder": {
+      "wav": "wav/thunder_01.wav",
+      "ogg": "ogg/thunder_01.ogg"
+    },
+    "wind": {
+      "wav": "wav/wind_01.wav",
+      "ogg": "ogg/wind_01.ogg"
+    },
+    "poison": {
+      "wav": "wav/poison_01.wav",
+      "ogg": "ogg/poison_01.ogg"
+    },
+    "holy": {
+      "wav": "wav/holy_01.wav",
+      "ogg": "ogg/holy_01.ogg"
+    },
+    "shadow": {
+      "wav": "wav/shadow_01.wav",
+      "ogg": "ogg/shadow_01.ogg"
+    },
+    "arcane_blast": {
+      "wav": "wav/arcane_blast_01.wav",
+      "ogg": "ogg/arcane_blast_01.ogg"
+    },
+    "heal": {
+      "wav": "wav/heal_01.wav",
+      "ogg": "ogg/heal_01.ogg"
+    },
+    "buff": {
+      "wav": "wav/buff_01.wav",
+      "ogg": "ogg/buff_01.ogg"
+    },
+    "debuff": {
+      "wav": "wav/debuff_01.wav",
+      "ogg": "ogg/debuff_01.ogg"
+    },
+    "shield_up": {
+      "wav": "wav/shield_up_01.wav",
+      "ogg": "ogg/shield_up_01.ogg"
+    },
+    "shield_break": {
+      "wav": "wav/shield_break_01.wav",
+      "ogg": "ogg/shield_break_01.ogg"
+    },
+    "mana": {
+      "wav": "wav/mana_01.wav",
+      "ogg": "ogg/mana_01.ogg"
+    },
+    "teleport": {
+      "wav": "wav/teleport_01.wav",
+      "ogg": "ogg/teleport_01.ogg"
+    },
+    "summon": {
+      "wav": "wav/summon_01.wav",
+      "ogg": "ogg/summon_01.ogg"
+    },
+    "portal": {
+      "wav": "wav/portal_01.wav",
+      "ogg": "ogg/portal_01.ogg"
+    },
+    "time_warp": {
+      "wav": "wav/time_warp_01.wav",
+      "ogg": "ogg/time_warp_01.ogg"
+    },
+    "dispel": {
+      "wav": "wav/dispel_01.wav",
+      "ogg": "ogg/dispel_01.ogg"
+    },
+    "enchant": {
+      "wav": "wav/enchant_01.wav",
+      "ogg": "ogg/enchant_01.ogg"
+    },
+    "rune": {
+      "wav": "wav/rune_01.wav",
+      "ogg": "ogg/rune_01.ogg"
+    },
+    "spell_ready": {
+      "wav": "wav/spell_ready_01.wav",
+      "ogg": "ogg/spell_ready_01.ogg"
+    }
+  },
+  "full_pack": "https://willosuna.itch.io/magic-spells-sfx"
+}

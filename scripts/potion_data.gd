@@ -6,6 +6,7 @@ static func get_all_potions() -> Array[Dictionary]:
 		{
 			"id": "stone_skin",
 			"name": "Stone Skin Brew",
+			"icon_path": "res://assets/pixel-potions-v1/icons/potion3-crystal-icon.png",
 			"buff_text": "+50% Defense (Take Half Damage)",
 			"debuff_text": "-40% Movement Speed",
 			"speed_mod": 0.6,
@@ -16,6 +17,7 @@ static func get_all_potions() -> Array[Dictionary]:
 		{
 			"id": "berserker",
 			"name": "Berserker Tonic",
+			"icon_path": "res://assets/pixel-potions-v1/icons/potion3-storm-icon.png",
 			"buff_text": "+100% Attack Speed & Heavy Damage",
 			"debuff_text": "Reduce Current HP to 1 Heart for this fight",
 			"speed_mod": 1.1,
@@ -26,6 +28,7 @@ static func get_all_potions() -> Array[Dictionary]:
 		{
 			"id": "shadow",
 			"name": "Shadow Elixir",
+			"icon_path": "res://assets/pixel-potions-v1/icons/potion2-poison-icon.png",
 			"buff_text": "+40% Move Speed & Extended Dodge",
 			"debuff_text": "+25% Extra Damage Taken if Hit",
 			"speed_mod": 1.4,
@@ -36,6 +39,7 @@ static func get_all_potions() -> Array[Dictionary]:
 		{
 			"id": "volatile",
 			"name": "Volatile Draft",
+			"icon_path": "res://assets/pixel-potions-v1/icons/potion2-heartbeat-icon.png",
 			"buff_text": "High Attack Speed & Swift Moves",
 			"debuff_text": "Taking damage costs 2 Hearts instead of 1",
 			"speed_mod": 1.2,

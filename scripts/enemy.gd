@@ -2,10 +2,12 @@ extends CharacterBody2D
 
 var monster_type: int = 1
 var health: int = 3
+var max_health: int = 3
 var move_speed: float = 100.0
 var target: Node2D = null
 
 @onready var hitbox_area: Area2D = $HitboxArea
+@onready var health_bar: ProgressBar = $HealthBar
 
 func _ready() -> void:
 	monster_type = GameManager.current_monster_index
@@ -27,6 +29,11 @@ func setup_monster_stats() -> void:
 			health = 15
 			move_speed = 140.0
 
+	max_health = health
+	if health_bar:
+		health_bar.max_value = max_health
+		health_bar.value = health
+
 func _physics_process(_delta: float) -> void:
 	if target and is_instance_valid(target):
 		var dir = (target.global_position - global_position).normalized()
@@ -35,6 +42,9 @@ func _physics_process(_delta: float) -> void:
 
 func take_damage(amount: int) -> void:
 	health -= amount
+	if health_bar:
+		health_bar.value = health
+		
 	if health <= 0:
 		die()
 
@@ -47,3 +57,5 @@ func die() -> void:
 func _on_hitbox_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.take_damage(1)
+		
+		

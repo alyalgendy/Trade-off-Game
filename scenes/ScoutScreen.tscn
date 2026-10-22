@@ -1,23 +1,37 @@
 [gd_scene format=3 uid="uid://db7vjk3h7j8ha"]
 
 [ext_resource type="Script" uid="uid://c5gwmgrhx2g0s" path="res://scripts/scout_screen.gd" id="1_ficas"]
+[ext_resource type="Texture2D" uid="uid://b1y3u6tlxhtea" path="res://assets/Foozle_2DT0003_Lucifer_Dungeon_Tileset_Pixel_Art/Png/92b8d876-6f83-4faa-8c8d-9544470ae4d2.jpg" id="2_57skf"]
+[ext_resource type="Texture2D" uid="uid://dp635ypnfafr" path="res://assets/12_demon_red_idle.png" id="3_utbk0"]
 
 [node name="ScoutScreen" type="Control" unique_id=1995499492]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ficas")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2103293831]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1081.0
+texture = ExtResource("2_57skf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1661393211]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.0
+offset_top = -301.0
+offset_right = 388.0
+offset_bottom = 250.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1542502093]
 layout_mode = 2
@@ -30,6 +44,9 @@ layout_mode = 2
 
 [node name="MonsterTexture" type="TextureRect" parent="VBoxContainer/MonsterPreviewBox/VBoxContainer" unique_id=981354004]
 layout_mode = 2
+offset_transform_enabled = true
+texture = ExtResource("3_utbk0")
+stretch_mode = 5
 
 [node name="MonsterPreviewLabel" type="Label" parent="VBoxContainer/MonsterPreviewBox/VBoxContainer" unique_id=947951816]
 layout_mode = 2
@@ -40,5 +57,7 @@ alignment = 1
 
 [node name="EnterArenaButton" type="Button" parent="VBoxContainer" unique_id=1372395556]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Enter Arena"
 
 [connection signal="pressed" from="VBoxContainer/EnterArenaButton" to="." method="_on_enter_arena_button_pressed"]

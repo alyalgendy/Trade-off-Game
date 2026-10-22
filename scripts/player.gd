@@ -11,9 +11,12 @@ var is_invulnerable: bool = false
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_timer: Timer = $AttackTimer
 @onready var iframe_timer: Timer = $IFrameTimer
+@onready var slash_visual: Sprite2D = $AttackArea/SlashVisual
 
 func _ready() -> void:
 	attack_area.monitoring = false
+	if slash_visual:
+		slash_visual.visible = false
 	apply_potion_modifiers()
 
 func apply_potion_modifiers() -> void:
@@ -41,8 +44,16 @@ func perform_attack() -> void:
 	can_attack = false
 	attack_area.monitoring = true
 	
+	# Show Attack Visual & Play Sound
+	if slash_visual:
+		slash_visual.visible = true
+	SFXManager.play_sfx("attack")
+	
 	await get_tree().create_timer(0.15).timeout
+	
 	attack_area.monitoring = false
+	if slash_visual:
+		slash_visual.visible = false
 	
 	attack_timer.start(attack_cooldown)
 
@@ -56,6 +67,8 @@ func take_damage(base_amount: int = 1) -> void:
 	var final_damage = int(ceil(base_amount * damage_take_mod))
 	GameManager.lose_heart(final_damage)
 	
+	SFXManager.play_sfx("hurt")
+	
 	is_invulnerable = true
 	iframe_timer.start(1.0)
 
@@ -64,4 +77,5 @@ func _on_iframe_timer_timeout() -> void:
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
+		SFXManager.play_sfx("hit")
 		body.take_damage(1)

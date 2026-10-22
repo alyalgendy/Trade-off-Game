@@ -19,10 +19,10 @@ func reset_run() -> void:
 	max_hearts = 3
 	current_monster_index = 1
 	active_potion = {}
-	get_tree().change_scene_to_file("res://ScoutScreen.tscn")
+	get_tree().change_scene_to_file("res://scenes/ScoutScreen.tscn")
 
 func game_over() -> void:
-	get_tree().change_scene_to_file("res://GameOverScreen.tscn")
+	get_tree().change_scene_to_file("res://scenes/GameOverScreen.tscn")
 
 func win_game() -> void:
-	get_tree().change_scene_to_file("res://VictoryScreen.tscn")
+	get_tree().change_scene_to_file("res://scenes/VictoryScreen.tscn")

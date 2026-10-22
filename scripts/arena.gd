@@ -31,4 +31,4 @@ func on_monster_defeated() -> void:
 		GameManager.win_game()
 	else:
 		GameManager.current_monster_index += 1
-		get_tree().change_scene_to_file("res://ScoutScreen.tscn")
+		get_tree().change_scene_to_file("res://scenes/ScoutScreen.tscn")
